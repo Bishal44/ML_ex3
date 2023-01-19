@@ -6,10 +6,10 @@ Filtering conditions - concerning the topics for Exercise 3:
 - re-use provided input data/ pictures / texts
 - re-use existing lecture materials
 - relatively cleare descriptions about the expectations
+- experience with the owner of Topic 3.3 (Reinforcement learning)
 
 
 Shortlisted topics (á la Gábor) based on "prio"rities:
-
 
 3.1.) Advanced topics Adversarial Machine Learn & privacy-preserving Machine Learning - Prio 2
 -	3.1.1.4: Model Stealing / Extraction (A.Type.1)
