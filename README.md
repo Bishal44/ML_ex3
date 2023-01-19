@@ -24,8 +24,5 @@ Shortlisted topics (á la Gábor) based on "prio"rities:
 -	3.2.1: Image / Text classification - Feature Extraction & Shallow vs. Deep Learning
 -	3.2.2: Image-to-image processing via Deep Learning (e.g. CNN-based Image upscaling)
 -		- image deblurring
-
-3.3.) Reinforcement learning (10-15 slide) - Prio 3
--	3.3.1.) K-armed bandit problem - Tracking a Nonstationary Problem
   
 PLEASE FEEL FREE TO COMMENT OR NARROW IT FURTHER!
