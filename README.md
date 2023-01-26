@@ -22,7 +22,8 @@ Shortlisted topics (á la Gábor) based on "prio"rities:
 
 3.2.) Deep Learning for Image/Text Classification - Prio 1
 -	3.2.1: Image / Text classification - Feature Extraction & Shallow vs. Deep Learning
--	3.2.2: Image-to-image processing via Deep Learning (e.g. CNN-based Image upscaling)
--		- image deblurring
+-	3.2.2: Image-to-image processing via Deep Learning (e.g. CNN-based Image upscaling) - image deblurring
+- **3.2.3: Next-word prediction (Language Modelling) using Deep Learning (Gabor: STRONGEST preference)**
+  
   
 PLEASE FEEL FREE TO COMMENT OR NARROW IT FURTHER!
