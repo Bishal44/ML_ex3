@@ -38,26 +38,26 @@ Subject 6:
 
 Each subdirectory in the bundle represents a newsgroup; each file in a subdirectory is the text of some newsgroup document that was posted to that newsgroup.
 We used the recommended second ("bydate") version of the dataset which is sorted by date into training(60%) and test(40%) sets. It does not include cross-posts (duplicates) and does not include newsgroup-identifying headers (Xref, Newsgroups, Path, Followup-To, Date). 
+- 20news-bydate.tar.gz - 20 Newsgroups sorted by date; duplicates and some headers removed (18846 documents)
+With the "bydate" version the cross-experiment comparison is easier (no randomness in train/test set selection), newsgroup-identifying information has been removed and it's more realistic because the train and test sets are separated in time.
+Matlab version represents 18824 documents. However, the rainbow2matlab.py script drops empty and single-word documents, of which there are 50 post-rainbow-processing, so you will find only 18774 total entries in the matlab/octave version (sparse matrix). This version is uploaded into folder "Data".
 
+6 files:
+- train.data
+- train.label
+- train.map
+- test.data
+- test.label
+- test.map
 
-20news-bydate.tar.gz - 20 Newsgroups sorted by date; duplicates and some headers removed (18846 documents)
+The .data files are formatted "docIdx wordIdx count". 
+The .label files are a list of label id's. 
+The .map files map from label id's to label names. 
+Rainbow was used to lex the data files. 
 
-
-I recommend the "bydate" version since cross-experiment comparison is easier (no randomness in train/test set selection), newsgroup-identifying information has been removed and it's more realistic because the train and test sets are separated in time.
-[7/3/07] I had originally listed the bydate version as containing 18941 documents. I've discovered that the correct count is 18846, of which rainbow skips 22. So the matlab version (below) represents 18824 documents. However, my rainbow2matlab.py script drops empty and single-word documents, of which there are 50 post-rainbow-processing, so you will find only 18774 total entries in the matlab/octave version.
-
-Matlab/Octave
-Below is a processed version of the 20news-bydate data set which is easy to read into Matlab/Octave as a sparse matrix:
-20news-bydate-matlab.tgz
-You'll find six files:
-train.data
-train.label
-train.map
-test.data
-test.label
-test.map
-The .data files are formatted "docIdx wordIdx count". The .label files are simply a list of label id's. The .map files map from label id's to label names. Rainbow was used to lex the data files. I used the following two scripts to produce the data files:
+I used the following two scripts to produce the data files:
 lexData.sh
 rainbow2matlab.py
-[Added 1/14/08] The following file contains the vocabulary for the indexed data. The line number corresponds to the index number of the word---word on the first line is word #1, word on the second line is word #2, etc.
-vocabulary.txt
+
+The "vocabulary.txt" file contains the vocabulary for the indexed data. 
+The line number corresponds to the index number of the word---word on the first line is word #1, word on the second line is word #2, etc.
