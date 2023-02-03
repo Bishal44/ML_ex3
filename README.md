@@ -1,6 +1,6 @@
 ## ML_ex3 - "3.2.3: Next-word prediction (Language Modelling) using Deep Learning"
 
-## DATA - 20 Newsgroups
+## DATA - 20 Newsgroups - http://qwone.com/~jason/20Newsgroups/
 
 It is a collection of appr. 20,000 newsgroup documents. The data is organized into 20 different newsgroups, each corresponding to a different topic. Some of the newsgroups are very closely related to each other (e.g. comp.sys.ibm.pc.hardware / comp.sys.mac.hardware), while others are highly unrelated (e.g misc.forsale / soc.religion.christian). Here is a list of the 20 newsgroups, partitioned (more or less) according to subject matter:
 
