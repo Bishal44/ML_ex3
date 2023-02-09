@@ -3,6 +3,10 @@
 ### DATA - "Reuters-21578" - http://www.daviddlewis.com/resources/testcollections/reuters21578/
 The data was originally collected and labeled by Carnegie Group, Inc. and Reuters, Ltd. in the course of developing the CONSTRUE text categorization system.  
 
+### SOURCE:
+https://www.youtube.com/watch?v=35tu6XnRkH0
+
+
 ## TASK:
 - Submit: report/presentation, data, Jupyternotebook,
 - A zip file with all needed files (your source code, your code compiled, data sets used (but NOT the ones we provide to you), a build script that resolves dependencies, or include any libraries you are using. Your submission needs to be self-contained!
