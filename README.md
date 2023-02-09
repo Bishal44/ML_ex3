@@ -1,8 +1,7 @@
 ## ML_ex3 - "3.2.3: Next-word prediction (Language Modelling) using Deep Learning"
 
-### DATA - Reuters - 
-
-
+### DATA - "Reuters-21578" - http://www.daviddlewis.com/resources/testcollections/reuters21578/
+The data was originally collected and labeled by Carnegie Group, Inc. and Reuters, Ltd. in the course of developing the CONSTRUE text categorization system.  
 
 ## TASK:
 - Submit: report/presentation, data, Jupyternotebook,
@@ -21,8 +20,8 @@
   - => Accuracy based on pre-defined sentences
   - => Runtime
 
-
 ## OPEN TOPICS:
 - Is there any further hint which was shared on discussion forum?
 - The report should be ppt or Word like?
 - What is the expected length of the report / ppt?
+- ...
