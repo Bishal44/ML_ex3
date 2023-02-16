@@ -5,10 +5,13 @@ The data was originally collected and labeled by Carnegie Group, Inc. and Reuter
 
 
 ### My (Gabor) suggestion how to proceed:
-- use the JN "Next_word_prediction_skeleton.ipynb", since it has its evaluation part in the same JN and it worked for the example,
+- use the JN "Next_word_prediction_skeleton.ipynb", since it has its prediction/evaluation part in the same JN and it worked for the example,
 - integrate Reuters data into thet JN like Violeta did for an other JN,
-- change the code to be able to set the (1) number of items considered in the sequence, (2) number of epochs (3) size of the training data, etc.
-- in the evaluation part we would select 20-30 sententences from the test part of the Reuters dataset and use these for eva
+- change the code to be able to set the (1) number of words considered in the sequence, (2) number of epochs (3) size of the training data, etc.
+- in the evaluation part we would select 20-30 sententences from the test part of the Reuters dataset and use these for evaluation.
+- as part of the evaluation we can compare the "correct answer" e.g. 6th word in the sentence vs. 
+
+- Note: size of the ultimately used dataset or training dataset we can calibrate in the way not to run the training model multiple times for hours,
 
 
 
