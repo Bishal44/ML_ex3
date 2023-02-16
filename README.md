@@ -4,15 +4,16 @@
 The data was originally collected and labeled by Carnegie Group, Inc. and Reuters, Ltd. in the course of developing the CONSTRUE text categorization system.  
 
 
-### My (Gabor) suggestion how to proceed:
-- use the JN "Next_word_prediction_skeleton.ipynb", since it has its prediction/evaluation part in the same JN and it worked for the example,
-- integrate Reuters data into thet JN like Violeta did for an other JN,
+## My (Gabor) suggestion how to proceed:
+- use the JN "Next_word_prediction_skeleton.ipynb", since it has its prediction/evaluation part in the same JN and it worked for a smaller example,
+- integrate Reuters data into that JN like Violeta did for an other JN,
 - change the code to be able to set the (1) number of words considered in the sequence, (2) number of epochs (3) size of the training data, etc.
-- in the evaluation part we would select 20-30 sententences from the test part of the Reuters dataset and use these for evaluation.
-- as part of the evaluation we can compare the "correct answer" e.g. 6th word in the sentence vs. 
-
+and the results per settings would be stored as a table or a graph at the end for the report
+- in the evaluation part we would select 20-30 sententences from the test part of the Reuters dataset (manually) and use these for evaluation.
+- as part of the evaluation we can compare the "correct answer" e.g. 6th word in the sentence vs. "next possible words:  ['on', 'out', 'of', 'part', 'away']".
+So if the "correct answer" = first "next possible words" => high accuracy. If the "correct answer" = second "next possible words" => medium accuracy, etc.
 - Note: size of the ultimately used dataset or training dataset we can calibrate in the way not to run the training model multiple times for hours,
-
+- We can start to write the report based on the strucutre of the code and some tutorials and once the results from the training&evaluation are ready, we can write the conlcusion part.
 
 
 
