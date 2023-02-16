@@ -3,6 +3,16 @@
 ### DATA - "Reuters-21578" - http://www.daviddlewis.com/resources/testcollections/reuters21578/
 The data was originally collected and labeled by Carnegie Group, Inc. and Reuters, Ltd. in the course of developing the CONSTRUE text categorization system.  
 
+
+### My (Gabor) suggestion how to proceed:
+- use the JN "Next_word_prediction_skeleton.ipynb", since it has its evaluation part in the same JN and it worked for the example,
+- integrate Reuters data into thet JN like Violeta did for an other JN,
+- change the code to be able to set the (1) number of items considered in the sequence, (2) number of epochs (3) size of the training data, etc.
+- in the evaluation part we would select 20-30 sententences from the test part of the Reuters dataset and use these for eva
+
+
+
+
 ### SOURCE:
 https://www.youtube.com/watch?v=35tu6XnRkH0
 
