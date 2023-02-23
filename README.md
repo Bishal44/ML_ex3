@@ -42,3 +42,13 @@ The data was originally collected and labeled by Carnegie Group, Inc. and Reuter
   - Your solutions (also describe failed approaches!)
   - Your results, evaluated on different datasets, parameters, ...
   - An analysis of the results
+  
+  
+  ## New JN Versions
+    - Model trained using LSTM32
+    - Model trained using LSTM64
+    - Model trained using Epoch32
+    - Model trained using Multilayer LSTM32
+    
+  ## Models - the models are saved in folder Model according to the used Hyperparameters
+
