@@ -6,13 +6,13 @@ The data was originally collected and labeled by Carnegie Group, Inc. and Reuter
 
 ## My (Gabor) suggestion how to proceed:
 - Continue to improve "Next_word_prediction_reuters_topic_Gabor.ipynb"
-  - "Input data" part: add something like "soup.find(topic="trade" or "earn" or ...)" => in order to select titles that belong to 20 topics out of 135. It is key to come below ~7.000 documents (out of 21.000) to be able to run all potential scenarios without letting kernel to collapse. Simply the dataset is too big.
+  - TODAY: "Input data" part: add something like "soup.find(topic="trade" or "earn" or ...)" => in order to select titles that belong to 20 topics out of 135. It is key to come below ~7.000 documents (out of 21.000) to be able to run all potential scenarios without letting kernel to collapse. Simply the dataset is too big.
   Alternative is to import only the first 7-8 files from 21.
-  - To test the performance of the training, it would be good to run it with some effort intensive setup, like LSTM (128) and 60 epochs and with row "history = model.fit(X, Y, validation_split=0.05, batch_size=50, epochs=60, shuffle=True).history" I expect that in worst case the calculation still finishes in 30 minutes. 
-  - The code should be reviewed from line "Save trained model" on and re-written => to have visualization component as well that we can generate per scenario and additionally it can evaluate 20-30 titles from the corpus. I have found one useful video for this: https://www.youtube.com/watch?v=_7V97SezCXI (from 0:40 seconds). My strong believe is that we only need to reuse the same code.
-  - For the sentence evaluation part, we can use the already listed sentences shown in the penel before the one: "Creating a Prediction script".
+  - TODAY: To test the performance of the training, it would be good to run it with some effort intensive setup, like LSTM (128) and 60 epochs and with row "history = model.fit(X, Y, validation_split=0.05, batch_size=50, epochs=60, shuffle=True).history" I expect that in worst case the calculation still finishes in 30 minutes. 
+  - TODAY: The code should be reviewed from line "Save trained model" on and re-written => to have visualization component as well that we can generate per scenario and additionally it can evaluate 20-30 titles from the corpus. I have found one useful video for this: https://www.youtube.com/watch?v=_7V97SezCXI (from 0:40 seconds). My strong believe is that we only need to reuse the same code.
+  - TODAY: For the sentence evaluation part, we can use the already listed sentences shown in the penel before the one: "Creating a Prediction script".
 
-- Potential hyperparameters for scenario generation **(24/48 scenarios)**:
+- TOMORROW: Potential hyperparameters for scenario generation **(24/48 scenarios)**:
   - Size of X and Y are given for training (I would not play around with this)
   - Number of words in sequence (1 or 3 or 5), I assume it is "WORD_LENGTH = 5"
   - Number of Epochs (20 or 32 or 64 or 128)
