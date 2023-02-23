@@ -50,6 +50,8 @@ The data was originally collected and labeled by Carnegie Group, Inc. and Reuter
  - Model trained using LSTM128
  - Model trained using Epoch32
  - Model trained using Multilayer LSTM32
+ - Model trained using Multilayer LSTM64
+
  
  So far the best model is the LSTM128 (the higher the LSTM, the higher accuracy we get)
     
