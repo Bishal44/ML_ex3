@@ -47,8 +47,10 @@ The data was originally collected and labeled by Carnegie Group, Inc. and Reuter
  ## New JN Versions
  - Model trained using LSTM32
  - Model trained using LSTM64
+ - Model trained using LSTM128
  - Model trained using Epoch32
  - Model trained using Multilayer LSTM32
+ So far the best model is the LSTM128 (the higher the LSTM, the higher accuracy we get)
     
  ## Models - the models are saved in folder Model according to the used Hyperparameters
 
