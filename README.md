@@ -45,6 +45,7 @@ The data was originally collected and labeled by Carnegie Group, Inc. and Reuter
   
   
  ## New JN Versions
+ - Used segments from 0 to 7 (if u want to execute the code add the sgm 0-7 in reuters_sample folder)
  - Model trained using LSTM32
  - Model trained using LSTM64
  - Model trained using LSTM128
