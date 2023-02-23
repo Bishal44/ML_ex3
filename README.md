@@ -12,7 +12,7 @@ The data was originally collected and labeled by Carnegie Group, Inc. and Reuter
   - The code should be reviewed from line "Save trained model" on and re-written => to have visualization component as well that we can generate per scenario and additionally it can evaluate 20-30 titles from the corpus. I have found one useful video for this: https://www.youtube.com/watch?v=_7V97SezCXI (from 0:40 seconds). My strong believe is that we only need to reuse the same code.
   - For the sentence evaluation part, we can use the already listed sentences shown in the penel before the one: "Creating a Prediction script".
 
-- Potential hyperparameters:
+- Potential hyperparameters for scenario generation **(24/48 scenarios)**:
   - Size of X and Y are given for training (I would not play around with this)
   - Number of words in sequence (1 or 3 or 5), I assume it is "WORD_LENGTH = 5"
   - Number of Epochs (20 or 32 or 64 or 128)
