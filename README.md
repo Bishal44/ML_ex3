@@ -73,22 +73,13 @@ Chapters:
 For this exercise we took the "Reuters-21578" dataset out of the provided three options in the official description of this exercise. 
 The data was originally collected and labeled by Carnegie Group, Inc. and Reuters, Ltd. in the course of developing the CONSTRUE text categorization system.
 The data-set contains 21 "sgm" files and 21.000+ documents that some overlaps. The datasets has at least the following key attributes: topic, title, body.
-At the beginning, ambitiously, we tried to integrate the "body" part of the overall data-set, however after couple of collapse of the kernel, we changed our idea. We tried to continue with the "titles". We experienced the same issue - even after removing the duplicities. Since we intended to generate comparable scenarios, we needed to scale the size of the input data to a manageable level (to ~40%). We imported the files from 00-to-07, according to the numbering of the files. Finally, we took ~8.000 documents for our experimentation.
-
-
-
-
-
-  Difficulties:
-  - In any constellation, we were not able to use the whole Reuters dataset. We were ambitiously started with the "body" part of the corups,
-but after several tries we were not able to start training our model even with the most simple setup.
-  - We changed to use "title" wich is shorter and more handful structure, however we needed to face with the same issue
-(even after removing duplicities).
-  - Ultimately, in order to be able to generate comparable scenarios we scaled down the size to the input data to ~40% of the original corpus.
+At the beginning, ambitiously, we tried to integrate the "body" part of the overall corpus, however after couple of collapse of the kernel, we changed our idea. We tried to continue with the "titles". We experienced the same issue - even after removing the duplicities. Since we intended to generate comparable scenarios, we needed to scale the size of the input data to a manageable level (to ~40%). We imported the files from 00-to-07, according to the numbering of the files. Finally, we took ~8.000 documents for our experimentation.
  
 3.) Technical setup
-  - heavy calculation / GPU intensive exercise (used environments - e.g.: GoogleColab)
-  - imported python packages
+
+Each of the used different hardware setup, however all model training scenario (12) and prediction (12) were executed on different machines.
+We also reconfirmed that tensoflow is - by default - primarily using GPU intensive calculations, so we also leveraged GoogleColab (with available GPU resources) for building the code.
+Key packages: "tensorflow", "keras", "nltk", "numpy", "pickle", "string", "heapq", "bs4", "os", "matplotlib".
 
 4.) Logical structure of the algorithm
   - importing packages and sub-set of data
