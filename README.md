@@ -62,10 +62,12 @@ The data was originally collected and labeled by Carnegie Group, Inc. and Reuter
 Exercise 3 - Title, (WS2022)
 Group number - members name / IDs
 
-Chapters:
-1.) Selected topic: 
-  - which topic did we select?
-  - which method did we take (Deep learning, RNN, LSTM, ...)?
+General:
+We have selected the "3.2.3: Next-word prediction (Language Modelling) using Deep Learning" topic from the published list of topics. 
+After the review of the research report provided as supporting material, we have selected an LSTM based Deep Learning model.
+While we have been searching for relevant supporting documentation on github, we have concluded that the available examples either based primarily on "keras" or "tensorflow" or "nltk" packages but with the same logical structure. **we need to quote in the footnote the used reference materials**
+
+
   - information sources for our model (with reference)
 
 2.) Used data (Reuters)
