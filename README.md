@@ -59,25 +59,24 @@ The data was originally collected and labeled by Carnegie Group, Inc. and Reuter
 
 
 
-Exercise 3 - Title, (WS2022)
-Group number - members name / IDs
+Exercise 3 - Title, (WS2022), date
+Group number 31 - members name / IDs
 
 General:
 We have selected the "3.2.3: Next-word prediction (Language Modelling) using Deep Learning" topic from the published list of topics. 
 After the review of the research report provided as supporting material, we have selected an LSTM based Deep Learning model.
-While we have been searching for relevant supporting documentation on github, we have concluded that the available examples either based primarily on "keras" or "tensorflow" or "nltk" packages but with the same logical structure. **we need to quote in the footnote the used reference materials**
+While we have been searching for relevant supporting documentation on github, we have concluded that the available examples either based primarily on "keras" or "tensorflow" or "nltk" packages but with the same logical structure. **We need to quote in the footnote the used reference materials**
+After overcoming calculation related performance issues. We created a combined training and prediction model that we cloned according to our hyperparameter tuning scenarios 12 times. In this research report we intend to summarize the key conditions and outcomes of our experimentations (including successes and failures).
 
 
-  - information sources for our model (with reference)
-
-2.) Used data (Reuters)
+1.) Used data (Reuters)
 
 For this exercise we took the "Reuters-21578" dataset out of the provided three options in the official description of this exercise. 
 The data was originally collected and labeled by Carnegie Group, Inc. and Reuters, Ltd. in the course of developing the CONSTRUE text categorization system.
 The data-set contains 21 "sgm" files and 21.000+ documents that some overlaps. The datasets has at least the following key attributes: topic, title, body.
-At the beginning, ambitiously, we tried to integrate the "body" part of the overall corpus, however after couple of collapse of the kernel, we changed our idea. We tried to continue with the "titles". We experienced the same issue - even after removing the duplicities. Since we intended to generate comparable scenarios, we needed to scale the size of the input data to a manageable level (to ~40%). We imported the files from 00-to-07, according to the numbering of the files. Finally, we took ~8.000 documents for our experimentation.
+At the beginning, ambitiously, we tried to integrate the "body" part of the overall corpus, however after couple of collapse of the kernel or extremely long calculation time (30+ hours), we changed our original approach. We tried to continue with the "titles". We experienced the same issue - even after removing the duplicities. Since we intended to generate comparable scenarios, we needed to scale the size of the input data to a manageable level (to ~40%). We imported the files from 00-to-07, according to the numbering of the files. Finally, we took ~8.000 documents for our experimentation.
  
-3.) Technical setup
+2.) Technical setup
 
 Each of the used different hardware setup, however all model training scenario (12) and prediction (12) were executed on different machines.
 We also reconfirmed that tensoflow is - by default - primarily using GPU intensive calculations, so we also leveraged GoogleColab (with available GPU resources) for building the code.
