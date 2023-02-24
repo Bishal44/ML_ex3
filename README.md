@@ -31,18 +31,6 @@ The data was originally collected and labeled by Carnegie Group, Inc. and Reuter
 ### SOURCE:
 - https://www.youtube.com/watch?v=35tu6XnRkH0
 - https://www.youtube.com/watch?v=_7V97SezCXI (for prediction part)
-
-## REPORT:
-- Write a REPORT about our results (no PPT),
-- Submit report, data, Jupyternotebook,
-- A zip file with all needed files (your source code, your code compiled, data sets used (but NOT the ones we provide to you), a build script that resolves dependencies, or include any libraries you are using. Your submission needs to be self-contained!
-- Dedicated panel in the report and in JN: a short how-to explaining the way to start your program (which is the main file, which command-line options does it expect).
-- Make sure dependencies are either packaged along, or are easily resolved (build file, virtual environment, etc., whatever applicable for your approach)
-- Report:
-  - Your solutions (also describe failed approaches!)
-  - Your results, evaluated on different datasets, parameters, ...
-  - An analysis of the results
-  
   
  ## New JN Versions
  - Used segments from 0 to 7 (if u want to execute the code add the sgm 0-7 in reuters_sample folder)
@@ -57,4 +45,58 @@ The data was originally collected and labeled by Carnegie Group, Inc. and Reuter
  So far the best model is the LSTM128 (the higher the LSTM, the higher accuracy we get)
     
  ## Models - the models are saved in folder Model according to the used Hyperparameters
+
+## REPORT:
+- Write a REPORT about our results (no PPT),
+- Submit report, data, Jupyternotebook,
+- A zip file with all needed files (your source code, your code compiled, data sets used (but NOT the ones we provide to you), a build script that resolves dependencies, or include any libraries you are using. Your submission needs to be self-contained!
+- Dedicated panel in the report and in JN: a short how-to explaining the way to start your program (which is the main file, which command-line options does it expect).
+- Make sure dependencies are either packaged along, or are easily resolved (build file, virtual environment, etc., whatever applicable for your approach)
+- Report:
+  - Your solutions (also describe failed approaches!)
+  - Your results, evaluated on different datasets, parameters, ...
+  - An analysis of the results
+
+
+
+Exercise 3 - Title, (WS2022)
+Group number - members name / IDs
+
+Chapters:
+1.) Selected topic: 
+  - which topic did we select?
+  - which method did we take (Deep learning, RNN, LSTM, ...)?
+  - information sources for our model (with reference)
+
+2.) Used data (Reuters)
+  - characteristics of the data (topic, title, body) => finally selected 'title'
+  - html content (with 'sgm' extension) 
+  - how we define the subset (21.000+ => 8.000)
+  Difficulties:
+  - In any constellation, we were not able to use the whole Reuters dataset. We were ambitiously started with the "body" part of the corups,
+but after several tries we were not able to start training our model even with the most simple setup.
+  - We changed to use "title" wich is shorter and more handful structure, however we needed to face with the same issue
+(even after removing duplicities).
+  - Ultimately, in order to be able to generate comparable scenarios we scaled down the size to the input data to ~40% of the original corpus.
+ 
+3.) Technical setup
+  - heavy calculation / GPU intensive exercise (used environments - e.g.: GoogleColab)
+  - imported python packages
+
+4.) Logical structure of the algorithm
+  - importing packages and sub-set of data
+  - 
+
+
+5.) Scenarios
+
+6.) Conclusion based on scenarios
+
+
+## Submission:
+- create 12 clean JN - train and prediction (i.e.: removing unnecessary content, writing comments),
+- pack input data
+- pack output 'png' and 'model' files per scenario
+- report (pdf)
+
 
