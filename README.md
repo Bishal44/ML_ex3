@@ -57,34 +57,56 @@ The data was originally collected and labeled by Carnegie Group, Inc. and Reuter
   - Your results, evaluated on different datasets, parameters, ...
   - An analysis of the results
 
+**Machine Learning - Exercise 3 (WS 2022)**
+Group (31): Petkova Violeta (01636660), Upadhyaya Bishal (12119246), Gabor Toaso (12127079)
 
-
-
-**Exercise 3 - Title, (WS2022), date**
-Group number 31 - members name / IDs
+Selected topic: 3.2.3 Next-word prediction (Language Modelling) using Deep Learning
 
 **General:**
-We have selected the "3.2.3: Next-word prediction (Language Modelling) using Deep Learning" topic from the published list of topics. 
-After the review of the research report provided as supporting material, we have selected an LSTM based Deep Learning model.
+We selected the "3.2.3: Next-word prediction (Language Modelling) using Deep Learning" topic from the published list of topics. 
+The algorithm considers predicting the next possible word (e.g.: the last word of a particular sentence) We used a methods of natural language processing, language modeling, and deep learning in connection with LSTM.
 While we have been searching for relevant supporting documentation on github, we have concluded that the available examples either based primarily on "keras" or "tensorflow" or "nltk" packages but with the same logical structure. **We need to quote in the footnote the used reference materials**
 After overcoming the calculation related performance issues, we created a combined training and prediction model that we cloned according to our hyperparameter tuning scenarios 12 times. In this research report we intend to summarize the key conditions and outcomes of our experimentations (including successes and failures).
 
-**1.) Used data (Reuters)**
-
-For this exercise we took the "Reuters-21578" dataset out of the provided three options in the official description of this exercise. 
-The data was originally collected and labeled by Carnegie Group, Inc. and Reuters, Ltd. in the course of developing the CONSTRUE text categorization system.
-The data-set contains 21 "sgm" files and 21.000+ documents that some overlaps. The datasets has at least the following key attributes: topic, title, body.
-At the beginning, ambitiously, we tried to integrate the "body" part of the overall corpus, however after couple of collapse of the kernel or extremely long calculation time (30+ hours), we changed our original approach. We tried to continue with the "titles". We experienced the same issue - even after removing the duplicities. Since we intended to generate comparable scenarios, we needed to scale the size of the input data to a manageable level (to ~40%). We imported the files from 00-to-07, according to the numbering of the files. Finally, we took ~8.000 documents for our experimentation.
- 
-**2.) Technical setup**
+**1.) Technical setup**
 
 Each of the used different hardware setup, however all model training scenario (12) and prediction (12) were executed on different machines.
 We also reconfirmed that tensoflow is - by default - primarily using GPU intensive calculations, so we also leveraged GoogleColab (with available GPU resources) for building the code. For documentation purpose we documented our code in JupyterNotbooks in transparent way.
 Key packages: "tensorflow", "keras", "nltk", "numpy", "pickle", "string", "heapq", "bs4", "os", "matplotlib".
 
+**2.) Used data (Reuters)**
+
+For this exercise we took the "Reuters-21578" dataset out of the provided three options in the official description of this exercise and saved as 'utf-8' format. 
+The data was originally collected and labeled by Carnegie Group, Inc. and Reuters, Ltd. in the course of developing the CONSTRUE text categorization system.
+The data-set contains 21 "sgm" files and 21.000+ documents that some overlaps. The datasets has at least the following key attributes: topic, title, body.
+At the beginning, ambitiously, we tried to integrate the "body" part of the overall corpus, however after couple of collapse of the kernel or extremely long calculation time (30+ hours), we changed our original approach. We tried to continue with the "titles". We experienced the same issue - even after removing the duplicities. Since we intended to generate comparable scenarios, we needed to scale the size of the input data to a manageable level (to ~40%). We imported the files from 00-to-07, according to the numbering of the files. The combined 'title' list contains ~8.000 documents or 14.400+ unique words.
+ 
 **3.) Logical structure of the algorithm**
 
 **3.1.) Training**
+
+The **pre-processing** part of the code mainly focused on to remove duplicities and unnecessary special characters. The granularity was gradually increasing from unique document level (~8.000) to unique word level (14.400+).
+As best-parctice, we also defined the sequence of 5 input words in order to predict one upcoming word. Since the 5 word long "window" needed to go from the beginning till the end of the input data-set, at the end ~51.400 sequences were identified.
+
+
+
+replace all (i) unnecessary extra new lines, (ii) the carriage return and (iii) the Unicode character,
+make sure we have only unique words (consider each word only once and remove additional repetitions) to avoid confusion,
+start to analyse data downloaded from xxx repository,
+
+tokenize the data (splitting bigger text corpus into smaller segments),
+
+Keras Tokenizer is used to vectorize a text corpus, by turning each text into either a sequence of integers (each integer being the index of a token in a dictionary) or into a vector where the coefficient for each token could be binary, based on word count, based on tf-idf.
+convert the texts to sequences (interpreting the text data into numbers),
+create the training dataset ('X'),
+define output for training data ('y') => 'y' contains all the next word predictions for each input 'X',
+calculate "vocab_size" by using the length extracted from "tokenizer.word_index" and then add 1 to it ("0" is reserved for padding and we start our cont from "1"),
+convert our predictions data 'y' to categorical data of the "vocab_size" => convert a class vector (integers) to the binary class matrix. This will be useful with our loss which will be categorical_crossentropy.
+improvements in pre-processing is still possible => to achieve a better loss and accuracy in lesser epochs,
+Predicting a sequential model
+
+
+
 
   - importing packages and sub-set of data
   - 
