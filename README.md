@@ -31,6 +31,8 @@ The data was originally collected and labeled by Carnegie Group, Inc. and Reuter
 ### SOURCE:
 - https://www.youtube.com/watch?v=35tu6XnRkH0
 - https://www.youtube.com/watch?v=_7V97SezCXI (for prediction part)
+- https://keras.io/guides/training_with_built_in_methods/
+- https://www.tensorflow.org/guide/keras/customizing_what_happens_in_fit
   
  ## New JN Versions
  - Used segments from 0 to 7 (if u want to execute the code add the sgm 0-7 in reuters_sample folder)
@@ -91,45 +93,46 @@ At the beginning, ambitiously, we tried to integrate the "body" part of the over
 - Then, we **split the sequences** into input (X) as training data-set and output elements (Y) of the training data as form of matrix (numpy.array) - based on the position number of the words.
 - To make the **output interpretable**, Y was changed to categorical variable. Basically, it converts a class vector (integers) to the binary class matrix. This will be useful with our loss which will be categorical_crossentropy.
 - As base-line we build a single layer LSTM(32) model with "embedding" (with XX parameter, "lstm" (with XX parameter) and "dense" (with XX parameter). **insert a picture** The number of LSTM layers and the level of LSTM were used as scalable hyperparamters for defining scenarios.
-- Since 
 - We selected **"Adam" optimizer**, since according to the literature it provides better results compared to the alternatively used "RMSprop" optimizer.
-- As measurable outcome, we selected **"accuracy"** and "loss" matrices.
+- As measurable outcome, we selected **"accuracy"** and "loss" ('categorical_crossentropy') matrices.
+- The **training** was running with 20 epochs for 25 minutes (as baseline).
 
+**3.2.) Prediction** - BISHAL
 
+- We **save our model in a "h5" file** per scenario for later usage for prediction purpose.
+- ...
+- ...
 
-
-
-Predicting a sequential model
-
-create an embedding layer and specify the input dimensions and output dimensions
+Not yet processed text:
+create an embedding layer and specify the input dimensions and output dimensions (10)
 specify the input length as 1 since the prediction will be made on exactly one word and we receive a reposne for that word,
 add an LSTM layer (#1) to our model with 1000 units which returns the sequences as true - to pass it through another LSTM layer,
 for the next LSTM layer (#2), we also pass it throught another 1000 units (the return sequense is false by default),
-pass this through a hidden layer with 1000 node units using "dense layer" function with "relu" set as the activation,
-pass
-...
-...
+pass this through a hidden layer with 1000 node units using "dense layer" function with "relu" set as the activation.
 For the next LSTM layer, we will also pass it through another 1000 units but we don’t need to specify return sequence as it is false by default. We will pass this through a hidden layer with 1000 node units using the dense layer function with relu set as the activation. Finally, we pass it through an output layer with the specified vocab size and a softmax activation. The softmax activation ensures that we receive a bunch of probabilities for the outputs equal to the vocab size. The entire code for our model structure is as shown below. After we look at the model code, we will also look at the model summary and the model plot.
 
-build a deep learning model (using LSTM),
-train model,
+**4.) Scenarios** - VIOLETA **in table format**
 
+The scenarios are defined alongside of:
+- Number of Epochs (20 or 50/60)
+- Single layer vs Multilayer
+- LSTM (32 or 64 or 128)
 
+We collected:
+- train and test loss rate
+- train and test accuracy
+- train and test runtime
+- evalution of 20/30 incomplete titles
 
-  - importing packages and sub-set of data
-  - 
+Scenarios:
+- Model trained using LSTM32 with 20 epochs
+- Model trained using LSTM64 with 20 epochs
+- Model trained using LSTM128 with 20 epochs
+- Model trained using Epoch32 with 20 epochs
+- Model trained using Multilayer LSTM32 with 20 epochs
+- Model trained using Multilayer LSTM64 with 20 epochs
 
-**3.2.) Prediction**
-
-- ...
-- ...
-
-**4.) Scenarios**
-
-- Single layers
-- Multilayers
-
-**5.) Conclusion based on scenarios**
+**5.) Conclusion based on scenarios** - ALL
 - ...
 
 **6.) Items for submission:**
