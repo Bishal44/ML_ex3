@@ -65,7 +65,7 @@ Selected topic: 3.2.3 Next-word prediction (Language Modelling) using Deep Learn
 **General:**
 We selected the "3.2.3: Next-word prediction (Language Modelling) using Deep Learning" topic from the published list of topics. 
 The algorithm considers predicting the next possible word (e.g.: the last word of a particular sentence) We used a methods of natural language processing, language modeling, and deep learning in connection with LSTM.
-While we have been searching for relevant supporting documentation on github, we have concluded that the available examples either based primarily on "keras" or "tensorflow" or "nltk" packages but with the same logical structure. **We need to quote in the footnote the used reference materials**
+While we have been searching for relevant supporting documentation on github, we have concluded that the available examples either based primarily on "tensorflow" or "nltk" packages but with the same logical structure. **We need to quote in the footnote the used reference materials**
 After overcoming the calculation related performance issues, we created a combined training and prediction model that we cloned according to our hyperparameter tuning scenarios 12 times. In this research report we intend to summarize the key conditions and outcomes of our experimentations (including successes and failures).
 
 **1.) Technical setup**
@@ -85,25 +85,13 @@ At the beginning, ambitiously, we tried to integrate the "body" part of the over
 
 **3.1.) Training**
 
-The **pre-processing** part of the code mainly focused on to remove duplicities and unnecessary special characters. The granularity was gradually increasing from unique document level (~8.000) to unique word level (14.400+).
-As best-parctice, we also defined the sequence of 5 input words in order to predict one upcoming word. Since the 5 word long "window" needed to go from the beginning till the end of the input data-set, at the end ~51.400 sequences were identified.
+- The **pre-processing** part of the code mainly focused on to remove duplicities and unnecessary special characters. The granularity was gradually increasing from unique document level (~8.000) to unique word level (14.400+).
+- We **tokenized** the data in order to split the bigger text corpus into smallere segments. Keras Tokenizer is used to vectorize a text corpus, by turning each text into either a sequence of integers (each integer being the index of a token in a dictionary) or into a vector where the coefficient for each token could be binary, based on word count, based on tf-idf. It converts convert the texts to sequences (interpreting the text data into numbers)
+- As best-parctice, we also defined the **sequence of 5 input words** in order to predict one upcoming word. Since the 5 word long "window" needed to go from the beginning till the end of the input data-set, at the end ~51.400 sequences were identified.
+- Then, we **split the sequences** into input (X) as training data-set and output elements (Y) of the training data as form of matrix (numpy.array) - based on the position number of the words.
+- To make the **output interpretable**, Y was changed to categorical variable. Basically, it converts a class vector (integers) to the binary class matrix. This will be useful with our loss which will be categorical_crossentropy.
 
 
-
-replace all (i) unnecessary extra new lines, (ii) the carriage return and (iii) the Unicode character,
-make sure we have only unique words (consider each word only once and remove additional repetitions) to avoid confusion,
-start to analyse data downloaded from xxx repository,
-
-tokenize the data (splitting bigger text corpus into smaller segments),
-
-Keras Tokenizer is used to vectorize a text corpus, by turning each text into either a sequence of integers (each integer being the index of a token in a dictionary) or into a vector where the coefficient for each token could be binary, based on word count, based on tf-idf.
-convert the texts to sequences (interpreting the text data into numbers),
-create the training dataset ('X'),
-define output for training data ('y') => 'y' contains all the next word predictions for each input 'X',
-calculate "vocab_size" by using the length extracted from "tokenizer.word_index" and then add 1 to it ("0" is reserved for padding and we start our cont from "1"),
-convert our predictions data 'y' to categorical data of the "vocab_size" => convert a class vector (integers) to the binary class matrix. This will be useful with our loss which will be categorical_crossentropy.
-improvements in pre-processing is still possible => to achieve a better loss and accuracy in lesser epochs,
-Predicting a sequential model
 
 
 
