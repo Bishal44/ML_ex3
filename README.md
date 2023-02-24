@@ -31,18 +31,8 @@ The data was originally collected and labeled by Carnegie Group, Inc. and Reuter
 ### SOURCE:
 - https://www.youtube.com/watch?v=35tu6XnRkH0
 - https://www.youtube.com/watch?v=_7V97SezCXI (for prediction part)
-
-## REPORT:
-- Write a REPORT about our results (no PPT),
-- Submit report, data, Jupyternotebook,
-- A zip file with all needed files (your source code, your code compiled, data sets used (but NOT the ones we provide to you), a build script that resolves dependencies, or include any libraries you are using. Your submission needs to be self-contained!
-- Dedicated panel in the report and in JN: a short how-to explaining the way to start your program (which is the main file, which command-line options does it expect).
-- Make sure dependencies are either packaged along, or are easily resolved (build file, virtual environment, etc., whatever applicable for your approach)
-- Report:
-  - Your solutions (also describe failed approaches!)
-  - Your results, evaluated on different datasets, parameters, ...
-  - An analysis of the results
-  
+- https://keras.io/guides/training_with_built_in_methods/
+- https://www.tensorflow.org/guide/keras/customizing_what_happens_in_fit
   
  ## New JN Versions
  - Used segments from 0 to 7 (if u want to execute the code add the sgm 0-7 in reuters_sample folder)
@@ -58,3 +48,95 @@ The data was originally collected and labeled by Carnegie Group, Inc. and Reuter
     
  ## Models - the models are saved in folder Model according to the used Hyperparameters
 
+## REPORT:
+- Write a REPORT about our results (no PPT),
+- Submit report, data, Jupyternotebook,
+- A zip file with all needed files (your source code, your code compiled, data sets used (but NOT the ones we provide to you), a build script that resolves dependencies, or include any libraries you are using. Your submission needs to be self-contained!
+- Dedicated panel in the report and in JN: a short how-to explaining the way to start your program (which is the main file, which command-line options does it expect).
+- Make sure dependencies are either packaged along, or are easily resolved (build file, virtual environment, etc., whatever applicable for your approach)
+- Report:
+  - Your solutions (also describe failed approaches!)
+  - Your results, evaluated on different datasets, parameters, ...
+  - An analysis of the results
+
+**Machine Learning - Exercise 3 (WS 2022)**
+Group (31): Petkova Violeta (01636660), Upadhyaya Bishal (12119246), Gabor Toaso (12127079)
+
+Selected topic: 3.2.3 Next-word prediction (Language Modelling) using Deep Learning
+
+**General:**
+We selected the "3.2.3: Next-word prediction (Language Modelling) using Deep Learning" topic from the published list of topics. 
+The algorithm considers predicting the next possible word (e.g.: the last word of a particular sentence) We used a methods of natural language processing, language modeling, and deep learning in connection with LSTM.
+While we have been searching for relevant supporting documentation on github, we have concluded that the available examples either based primarily on "tensorflow" or "nltk" packages but with the same logical structure. **We need to quote in the footnote the used reference materials**
+After overcoming the calculation related performance issues, we created a combined training and prediction model that we cloned according to our hyperparameter tuning scenarios 12 times. In this research report we intend to summarize the key conditions and outcomes of our experimentations (including successes and failures).
+
+**1.) Technical setup**
+
+Each of the used different hardware setup, however all model training scenario (12) and prediction (12) were executed on different machines.
+We also reconfirmed that tensoflow is - by default - primarily using GPU intensive calculations, so we also leveraged GoogleColab (with available GPU resources) for building the code. For documentation purpose we documented our code in JupyterNotbooks in transparent way.
+Key packages: "tensorflow", "keras", "nltk", "numpy", "pickle", "string", "heapq", "bs4", "os", "matplotlib".
+
+**2.) Used data (Reuters)**
+
+For this exercise we took the "Reuters-21578" dataset out of the provided three options in the official description of this exercise and saved as 'utf-8' format. 
+The data was originally collected and labeled by Carnegie Group, Inc. and Reuters, Ltd. in the course of developing the CONSTRUE text categorization system.
+The data-set contains 21 "sgm" files and 21.000+ documents that some overlaps. The datasets has at least the following key attributes: topic, title, body.
+At the beginning, ambitiously, we tried to integrate the "body" part of the overall corpus, however after couple of collapse of the kernel or extremely long calculation time (30+ hours), we changed our original approach. We tried to continue with the "titles". We experienced the same issue - even after removing the duplicities. Since we intended to generate comparable scenarios, we needed to scale the size of the input data to a manageable level (to ~40%). We imported the files from 00-to-07, according to the numbering of the files. The combined 'title' list contains ~8.000 documents or 14.400+ unique words.
+ 
+**3.) Logical structure of the algorithm**
+
+**3.1.) Training**
+
+- The **pre-processing** part of the code mainly focused on to remove duplicities and unnecessary special characters. The granularity was gradually increasing from unique document level (~8.000) to unique word level (14.400+).
+- We **tokenized** the data in order to split the bigger text corpus into smallere segments. Keras Tokenizer is used to vectorize a text corpus, by turning each text into either a sequence of integers (each integer being the index of a token in a dictionary) or into a vector where the coefficient for each token could be binary, based on word count, based on tf-idf. It converts convert the texts to sequences (interpreting the text data into numbers)
+- As best-parctice, we also defined the **sequence of 5 input words** in order to predict one upcoming word. Since the 5 word long "window" needed to go from the beginning till the end of the input data-set, at the end ~51.400 sequences were identified.
+- Then, we **split the sequences** into input (X) as training data-set and output elements (Y) of the training data as form of matrix (numpy.array) - based on the position number of the words.
+- To make the **output interpretable**, Y was changed to categorical variable. Basically, it converts a class vector (integers) to the binary class matrix. This will be useful with our loss which will be categorical_crossentropy.
+- As base-line we build a single layer LSTM(32) model with "embedding" (with XX parameter, "lstm" (with XX parameter) and "dense" (with XX parameter). **insert a picture** The number of LSTM layers and the level of LSTM were used as scalable hyperparamters for defining scenarios.
+- We selected **"Adam" optimizer**, since according to the literature it provides better results compared to the alternatively used "RMSprop" optimizer.
+- As measurable outcome, we selected **"accuracy"** and "loss" ('categorical_crossentropy') matrices.
+- The **training** was running with 20 epochs for 25 minutes (as baseline).
+
+**3.2.) Prediction** - BISHAL
+
+- We **save our model in a "h5" file** per scenario for later usage for prediction purpose.
+- ...
+- ...
+
+Not yet processed text:
+create an embedding layer and specify the input dimensions and output dimensions (10)
+specify the input length as 1 since the prediction will be made on exactly one word and we receive a reposne for that word,
+add an LSTM layer (#1) to our model with 1000 units which returns the sequences as true - to pass it through another LSTM layer,
+for the next LSTM layer (#2), we also pass it throught another 1000 units (the return sequense is false by default),
+pass this through a hidden layer with 1000 node units using "dense layer" function with "relu" set as the activation.
+For the next LSTM layer, we will also pass it through another 1000 units but we don’t need to specify return sequence as it is false by default. We will pass this through a hidden layer with 1000 node units using the dense layer function with relu set as the activation. Finally, we pass it through an output layer with the specified vocab size and a softmax activation. The softmax activation ensures that we receive a bunch of probabilities for the outputs equal to the vocab size. The entire code for our model structure is as shown below. After we look at the model code, we will also look at the model summary and the model plot.
+
+**4.) Scenarios** - VIOLETA **in table format**
+
+The scenarios are defined alongside of:
+- Number of Epochs (20 or 50/60)
+- Single layer vs Multilayer
+- LSTM (32 or 64 or 128)
+
+We collected:
+- train and test loss rate
+- train and test accuracy
+- train and test runtime
+- evalution of 20/30 incomplete titles
+
+Scenarios:
+- Model trained using LSTM32 with 20 epochs
+- Model trained using LSTM64 with 20 epochs
+- Model trained using LSTM128 with 20 epochs
+- Model trained using Epoch32 with 20 epochs
+- Model trained using Multilayer LSTM32 with 20 epochs
+- Model trained using Multilayer LSTM64 with 20 epochs
+
+**5.) Conclusion based on scenarios** - ALL
+- ...
+
+**6.) Items for submission:**
+- 12 clean and well described JupyterNotbook - with training and prediction,
+- packed input data (from 00-to-07),
+- pack output graphs in 'png' format and 'model' files per scenario,
+- report (pdf)
