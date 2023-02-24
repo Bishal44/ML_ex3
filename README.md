@@ -90,9 +90,29 @@ At the beginning, ambitiously, we tried to integrate the "body" part of the over
 - As best-parctice, we also defined the **sequence of 5 input words** in order to predict one upcoming word. Since the 5 word long "window" needed to go from the beginning till the end of the input data-set, at the end ~51.400 sequences were identified.
 - Then, we **split the sequences** into input (X) as training data-set and output elements (Y) of the training data as form of matrix (numpy.array) - based on the position number of the words.
 - To make the **output interpretable**, Y was changed to categorical variable. Basically, it converts a class vector (integers) to the binary class matrix. This will be useful with our loss which will be categorical_crossentropy.
+- As base-line we build a single layer LSTM(32) model with "embedding" (with XX parameter, "lstm" (with XX parameter) and "dense" (with XX parameter). **insert a picture** The number of LSTM layers and the level of LSTM were used as scalable hyperparamters for defining scenarios.
+- Since 
+- We selected **"Adam" optimizer**, since according to the literature it provides better results compared to the alternatively used "RMSprop" optimizer.
+- As measurable outcome, we selected **"accuracy"** and "loss" matrices.
 
 
 
+
+
+Predicting a sequential model
+
+create an embedding layer and specify the input dimensions and output dimensions
+specify the input length as 1 since the prediction will be made on exactly one word and we receive a reposne for that word,
+add an LSTM layer (#1) to our model with 1000 units which returns the sequences as true - to pass it through another LSTM layer,
+for the next LSTM layer (#2), we also pass it throught another 1000 units (the return sequense is false by default),
+pass this through a hidden layer with 1000 node units using "dense layer" function with "relu" set as the activation,
+pass
+...
+...
+For the next LSTM layer, we will also pass it through another 1000 units but we don’t need to specify return sequence as it is false by default. We will pass this through a hidden layer with 1000 node units using the dense layer function with relu set as the activation. Finally, we pass it through an output layer with the specified vocab size and a softmax activation. The softmax activation ensures that we receive a bunch of probabilities for the outputs equal to the vocab size. The entire code for our model structure is as shown below. After we look at the model code, we will also look at the model summary and the model plot.
+
+build a deep learning model (using LSTM),
+train model,
 
 
 
