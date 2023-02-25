@@ -39,7 +39,7 @@ The data was originally collected and labeled by Carnegie Group, Inc. and Reuter
  - 1 Model trained using LSTM32
  - 2.) Single layer model trained using LSTM64 with 20 epochs (LSTM64.ipynb), training_time: 00:07:09
  - 3.) Single layer model trained using LSTM128 with 20 epochs (Single_layer_LSTM128_20epochs.ipynb), training_time: 00:12:15
- - 4 Model trained using Epoch32
+ - 4.) Single layer model trained using LSTM32 with 32 epochs (Single_layer_LSTM32_32epochs.ipynb), trainin_time: 00:08:10
  - 5 Model trained using Multilayer LSTM32
  - 6.) Multi-layer model using LSTM64 with 20 epochs (MultiLayer_LSTM64_20epochs.ipynb), training_time: 00:09:33
 
@@ -141,7 +141,7 @@ Scenarios:
 - Single layer model using LSTM64 with 20 epochs; training_time: 00:07:09 - LSTM64.ipynb
 - Model trained using LSTM64 with 20 epochs
 - Single layer model using LSTM128 with 20 epochs; training_time: 00:12:15 - Single_layer_LSTM128_20epochs.ipynb
-- Model trained using Epoch32 with 20 epochs
+- Single layer model using LSTM32 with 32 epochs; training_time: 00:08:10 - Single_layer_LSTM32_32epochs.ipynb
 - Model trained using Multilayer LSTM32 with 20 epochs
 - Multi-layer model using LSTM64 with 20 epochs; training_time: 00:09:33 - MultiLayer_LSTM64_20epochs.ipynb
 
