@@ -35,12 +35,12 @@ The data was originally collected and labeled by Carnegie Group, Inc. and Reuter
 - https://www.tensorflow.org/guide/keras/customizing_what_happens_in_fit
   
  ## New JN Versions
- - Used segments from 0 to 7 (if u want to execute the code add the sgm 0-7 in reuters_sample folder)
- - 1 Model trained using LSTM32
+ - Used segments from 0 to 7 (if u want to execute the code add the sgm 000-007 in reuters_sample folder)
+ - 1.) Single layer model trained using LSTM32 with 20 epochs (Single_layer_LSTM32_20epochs.ipynb), training_time: 00:06:23
  - 2.) Single layer model trained using LSTM64 with 20 epochs (LSTM64.ipynb), training_time: 00:07:09
  - 3.) Single layer model trained using LSTM128 with 20 epochs (Single_layer_LSTM128_20epochs.ipynb), training_time: 00:12:15
  - 4.) Single layer model trained using LSTM32 with 32 epochs (Single_layer_LSTM32_32epochs.ipynb), trainin_time: 00:08:10
- - 5 Model trained using Multilayer LSTM32
+ - 5.) Multi layer model trained using LSTM32 with 20 epochs (Multi_Layer_LSTM32_20epochs.ipynb), training_time: 00:07:41
  - 6.) Multi-layer model using LSTM64 with 20 epochs (MultiLayer_LSTM64_20epochs.ipynb), training_time: 00:09:33
 
 ## 10 titles for predictions from data-set (00-07):
@@ -137,13 +137,12 @@ We collected:
 - evalution of 20/30 incomplete titles
 
 Scenarios:
-- Model trained using LSTM32 with 20 epochs
-- Single layer model using LSTM64 with 20 epochs; training_time: 00:07:09 - LSTM64.ipynb
-- Model trained using LSTM64 with 20 epochs
-- Single layer model using LSTM128 with 20 epochs; training_time: 00:12:15 - Single_layer_LSTM128_20epochs.ipynb
-- Single layer model using LSTM32 with 32 epochs; training_time: 00:08:10 - Single_layer_LSTM32_32epochs.ipynb
-- Model trained using Multilayer LSTM32 with 20 epochs
-- Multi-layer model using LSTM64 with 20 epochs; training_time: 00:09:33 - MultiLayer_LSTM64_20epochs.ipynb
+ - 1.) Single layer model trained using LSTM32 with 20 epochs (Single_layer_LSTM32_20epochs.ipynb), training_time: 00:06:23
+ - 2.) Single layer model trained using LSTM64 with 20 epochs (LSTM64.ipynb), training_time: 00:07:09
+ - 3.) Single layer model trained using LSTM128 with 20 epochs (Single_layer_LSTM128_20epochs.ipynb), training_time: 00:12:15
+ - 4.) Single layer model trained using LSTM32 with 32 epochs (Single_layer_LSTM32_32epochs.ipynb), trainin_time: 00:08:10
+ - 5.) Multi layer model trained using LSTM32 with 20 epochs (Multi_Layer_LSTM32_20epochs.ipynb), training_time: 00:07:41
+ - 6.) Multi-layer model using LSTM64 with 20 epochs (MultiLayer_LSTM64_20epochs.ipynb), training_time: 00:09:33
 
 **5.) Conclusion based on scenarios** - ALL
 - ...
