@@ -37,7 +37,7 @@ The data was originally collected and labeled by Carnegie Group, Inc. and Reuter
  ## New JN Versions
  - Used segments from 0 to 7 (if u want to execute the code add the sgm 0-7 in reuters_sample folder)
  - 1 Model trained using LSTM32
- - 2.) Single layer model trained using LSTM64 with 20 epochs (LSTM64.ipynb), training_time: 00:11:02
+ - 2.) Single layer model trained using LSTM64 with 20 epochs (LSTM64.ipynb), training_time: 00:08:09
  - 3 Model trained using LSTM128
  - 4 Model trained using Epoch32
  - 5 Model trained using Multilayer LSTM32
@@ -138,7 +138,7 @@ We collected:
 
 Scenarios:
 - Model trained using LSTM32 with 20 epochs
-- Single layer model trained using LSTM64 with 20 epochs; training_time: 00:11:02; - LSTM64.ipynb
+- Single layer model trained using LSTM64 with 20 epochs; training_time: 00:08:09 - LSTM64.ipynb
 - Model trained using LSTM64 with 20 epochs
 - Model trained using LSTM128 with 20 epochs
 - Model trained using Epoch32 with 20 epochs
