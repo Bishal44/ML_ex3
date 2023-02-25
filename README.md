@@ -36,12 +36,24 @@ The data was originally collected and labeled by Carnegie Group, Inc. and Reuter
   
  ## New JN Versions
  - Used segments from 0 to 7 (if u want to execute the code add the sgm 0-7 in reuters_sample folder)
- - Model trained using LSTM32
- - Model trained using LSTM64
- - Model trained using LSTM128
- - Model trained using Epoch32
- - Model trained using Multilayer LSTM32
- - Model trained using Multilayer LSTM64
+ - 1 Model trained using LSTM32
+ - 2 Model trained using LSTM64
+ - 3 Model trained using LSTM128
+ - 4 Model trained using Epoch32
+ - 5 Model trained using Multilayer LSTM32
+ - 6 Model trained using Multilayer LSTM64
+
+## 10 titles for predictions from data-set (00-07):
+- 'farmers concerned about british sugar ownership'
+- 'satellite auction unit march, april bookings up'
+- 'winland electronics inc 4th qtr loss'
+- 'sapporo breweries issues five year sfr notes'
+- 'report due on oil imports and national security'
+- 'continental air february load factor falls'
+- 'great american issues 15 billion yen eurobond'
+- 'paribas shares to be quoted on main paris market'
+- 'salomon sells 200 mln stg mortgages-backed notes'
+- 'opec says february output under ceiling'
 
  
  So far the best model is the LSTM128 (the higher the LSTM, the higher accuracy we get)
