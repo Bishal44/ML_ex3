@@ -37,11 +37,11 @@ The data was originally collected and labeled by Carnegie Group, Inc. and Reuter
  ## New JN Versions
  - Used segments from 0 to 7 (if u want to execute the code add the sgm 0-7 in reuters_sample folder)
  - 1 Model trained using LSTM32
- - 2.) Single layer model trained using LSTM64 with 20 epochs (LSTM64.ipynb), training_time: 00:08:09
+ - 2.) Single layer model trained using LSTM64 with 20 epochs (LSTM64.ipynb), training_time: 00:07:09
  - 3 Model trained using LSTM128
  - 4 Model trained using Epoch32
  - 5 Model trained using Multilayer LSTM32
- - 6 Model trained using Multilayer LSTM64
+ - 6.) Multi-layer model using LSTM64 with 20 epochs (MultiLayer_LSTM64_20epochs.ipynb), training_time: 00:09:33
 
 ## 10 titles for predictions from data-set (00-07):
 - 'farmers concerned about british sugar ownership'
@@ -138,12 +138,12 @@ We collected:
 
 Scenarios:
 - Model trained using LSTM32 with 20 epochs
-- Single layer model trained using LSTM64 with 20 epochs; training_time: 00:08:09 - LSTM64.ipynb
+- Single layer model using LSTM64 with 20 epochs; training_time: 00:07:09 - LSTM64.ipynb
 - Model trained using LSTM64 with 20 epochs
 - Model trained using LSTM128 with 20 epochs
 - Model trained using Epoch32 with 20 epochs
 - Model trained using Multilayer LSTM32 with 20 epochs
-- Model trained using Multilayer LSTM64 with 20 epochs
+- Multi-layer model using LSTM64 with 20 epochs; training_time: 00:09:33 - MultiLayer_LSTM64_20epochs.ipynb
 
 **5.) Conclusion based on scenarios** - ALL
 - ...
