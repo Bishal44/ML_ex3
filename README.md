@@ -80,8 +80,8 @@ Key packages: "tensorflow", "keras", "nltk", "numpy", "pickle", "string", "heapq
 
 For this exercise we took the "Reuters-21578" dataset out of the provided three options in the official description of this exercise and saved as 'utf-8' format. 
 The data was originally collected and labeled by Carnegie Group, Inc. and Reuters, Ltd. in the course of developing the CONSTRUE text categorization system.
-The data-set contains 21 "sgm" files and 21.000+ documents that some overlaps. The datasets has at least the following key attributes: topic, title, body.
-At the beginning, ambitiously, we tried to integrate the "body" part of the overall corpus, however after couple of collapse of the kernel or extremely long calculation time (30+ hours), we changed our original approach. We tried to continue with the "titles". We experienced the same issue - even after removing the duplicities. Since we intended to generate comparable scenarios, we needed to scale the size of the input data to a manageable level (to ~40%). We imported the files from 00-to-07, according to the numbering of the files. The combined 'title' list contains ~8.000 documents or 14.400+ unique words.
+The data-set contains 21 "sgm" files and 21.000+ documents that some overlaps. The datasets has at least the following key attributes: date, topics, places, people, orgs, exchanges, companies, text, title, dateline.
+At the beginning, ambitiously, we tried to integrate the "text" part of the overall corpus, however after couple of collapse of the kernel or extremely long calculation time (30+ hours), we changed our focus to "title". Again, we experienced the same issue - even after removing the duplicities from the set of "title". Since we intended to generate comparable scenarios, we needed to scale the size of the input data to a manageable level (to ~40%). We imported the files from 00-to-07, according to the numbering of the files. The combined 'title' list contains ~8.000 documents or 14.400+ unique words.
  
 **3.) Logical structure of the algorithm**
 
