@@ -67,7 +67,7 @@ Selected topic: 3.2.3 Next-word prediction (Language Modelling) using Deep Learn
 **General:**
 We selected the "3.2.3: Next-word prediction (Language Modelling) using Deep Learning" topic from the published list of topics. 
 The algorithm considers predicting the next possible word (e.g.: the last word of a particular sentence) We used a methods of natural language processing, language modeling, and deep learning in connection with LSTM.
-While we have been searching for relevant supporting documentation on github, we have concluded that the available examples either based primarily on "tensorflow" or "nltk" packages but with the same logical structure. **We need to quote in the footnote the used reference materials**
+While we have been searching for relevant supporting documentation on github, we have concluded that the available examples either based primarily on "tensorflow" or "pytorch" packages but with the same logical structure. **We need to quote in the footnote the used reference materials**
 After overcoming the calculation related performance issues, we created a combined training and prediction model that we cloned according to our hyperparameter tuning scenarios 12 times. In this research report we intend to summarize the key conditions and outcomes of our experimentations (including successes and failures).
 
 **1.) Technical setup**
