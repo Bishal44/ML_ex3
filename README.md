@@ -138,6 +138,7 @@ We collected:
 
 Scenarios:
 - Model trained using LSTM32 with 20 epochs
+- Single layer model trained using LSTM64 with 20 epochs; training_time: 00:11:02; - LSTM64.ipynb
 - Model trained using LSTM64 with 20 epochs
 - Model trained using LSTM128 with 20 epochs
 - Model trained using Epoch32 with 20 epochs
